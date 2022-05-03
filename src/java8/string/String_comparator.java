@@ -135,7 +135,8 @@ public class String_comparator {
 		
 		
 		//오름차순 
-		printPeople("Sorted in ascending order by name and age : ", people.stream()
+		printPeople("Sorted in ascending order by name and age : ", 
+				people.stream()
 				// Comparator.comparing()메서드는 Function타입을 파라미터로 받아서 Comparator를 리턴함.
 				// Comparator.comparing()메서드는 Comparator를 생성한 후 나이를 기준으로 정렬하기 위해 리턴하고,
 				// 리턴된 Comparator는 thenComparing()메서드를 호출하여 나이와 이름 두값에 따라 비교하는 복합 Comparator를
@@ -144,11 +145,8 @@ public class String_comparator {
 				.collect(Collectors.toList()));
 
 		//내림차순
-		printPeople("Sorted in descending order by name and age : ", people.stream()
-				// Comparator.comparing()메서드는 Function타입을 파라미터로 받아서 Comparator를 리턴함.
-				// Comparator.comparing()메서드는 Comparator를 생성한 후 나이를 기준으로 정렬하기 위해 리턴하고,
-				// 리턴된 Comparator는 thenComparing()메서드를 호출하여 나이와 이름 두값에 따라 비교하는 복합 Comparator를
-				// 생성하게 된다.
+		printPeople("Sorted in descending order by name and age : ", 
+				people.stream()
 				.sorted(Comparator.comparing(byAge).reversed().thenComparing(byName).reversed())
 				.collect(Collectors.toList()));
 		
