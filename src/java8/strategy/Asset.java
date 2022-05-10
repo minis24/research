@@ -1,4 +1,4 @@
-package java8.asset;
+package java8.strategy;
 
 public class Asset {
 

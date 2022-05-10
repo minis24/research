@@ -1,11 +1,17 @@
-package java8.asset;
+package java8.strategy;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 
-import java8.asset.Asset.AssetType;
+import java8.strategy.Asset.AssetType;
 
+
+/**
+ * 람다식으로 스트레티지 패턴 구현.
+ * @author jangkwankim
+ *
+ */
 public class AssetUtil {
 
 	
