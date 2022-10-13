@@ -34,8 +34,8 @@ public class Stream_map {
 		//map()메서드는 입력컬렉션의 수는 출력컬렉션의 수와 같음을 보장한다.
 		// 타입은 다를 수 있다.
 		friends.stream()
-			.map(name -> name.length())
-			.forEach(count -> System.out.println(count));
+			.map(item -> item.length())
+			.forEach(item -> System.out.println("length : "+item));
 	
 		
 		

@@ -28,12 +28,12 @@ public class Stream_stream1 {
 				count ++;
 			}
 		}
-//		System.out.println(count);
-		
+		System.out.println(count);
+	 
 		
 		//스트림 연산
 		long cnt = list.stream().filter( w -> w.length() > 2).count();
-//		System.out.println(cnt);
+		System.out.println("CNT :"+ cnt);
 		
 		
 		//스트림은 '어떻게가 아니라 무엇을' 원칙을 따른다. 위의 예제에서는 무엇을 해야하는지 기술한다
@@ -79,16 +79,22 @@ public class Stream_stream1 {
 
         //(ex : 상수값들의 스트림)
 		Stream<String> echos = Stream.generate(() -> "Echo");	
+		//echos.forEach(System.out::println);
+		
 		
 		//(ex : 난수값들의 스트림)
         Stream<Double> random =  Stream.generate(Math::random);
-        
+        //random.forEach(System.out::println);
         //0,1,2,3,4....와 같은 무한 수열을 만들어 낼려면 iterate()메서드를 사용한다.
         //iterate()메서드는 시드(seed) 값과 함수를 받는다.(함수는 UnarayOperator<T>) 
         //이 받은 함수를 이전 결과에 반복적으로 적용한다.
         //(ex : 등차수열)
         Stream<BigInteger> itegers = Stream.iterate(BigInteger.ZERO, n->n.add(BigInteger.ONE));
         //첫번째 요소는 시드값인(0) 이다. 두번째 요소는 f(seed) 1이다
+        
+        System.out.println(BigInteger.ZERO.add(BigInteger.ONE));  //1
+        System.out.println(BigInteger.ONE.add(BigInteger.ONE));   //2
+        System.out.println(BigInteger.TEN.add(BigInteger.ONE));   //11
         
         
         

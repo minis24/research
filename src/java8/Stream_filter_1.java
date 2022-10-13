@@ -8,6 +8,8 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class Stream_filter_1 {
+	
+	
 	// 렉시컬스코프
 	// Predicate 
 	// --> 컬렉션에 있는 컨텍스트 엘리먼트를 표현하기 위해 하나의 파라미터를 받는 함수를 수신해야 하며 

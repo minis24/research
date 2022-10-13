@@ -10,7 +10,7 @@ public class Stream_filter_2 {
 	public static void pickName (final List<String> names, final String startingLetter ) {
 		final Optional<String> foundName = 
 				names.stream()
-					.filter(name -> name.startsWith(startingLetter)) 
+					.filter(name -> name.startsWith(startingLetter))
 					.findFirst(); //컬렉션의 첫번째 값을 추출하며, Optional 타입객체를 리턴함.
 		                          // --> 결과가 없는 경우 유용
 								  //isPresent() 메서드 : 객체가 존재하는지 알아보고

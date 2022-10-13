@@ -16,7 +16,14 @@ public class strComparator implements Comparator<String> {
 	
 	public static void main(String[] args) throws UnsupportedEncodingException {
 		
-
+		//비교할 문자열이 인자보다 크면 차이만큼 양의 정수 리턴 
+		//비교할 문자열이 인자보다 작으면 차이만큼 음의 정수 리턴 
+		//비교할 문자열이 같으면 0 리턴 
+		System.out.println("================================");
+		System.out.println("c".compareToIgnoreCase("a"));
+		System.out.println("================================");
+		
+		
 		
 		String a = new String("aaaaaa".getBytes("EUC-KR"));
 		System.out.println(a);
