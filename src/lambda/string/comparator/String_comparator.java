@@ -68,7 +68,13 @@ public class String_comparator {
 		
 		printPeople("Sorted in ascending order by age : ", ascAge2);
 		
-		
+		/*
+		Sorted in ascending order by age : 
+		Jhon - 20
+		Sara - 21
+		Jane - 21
+		Greg - 35	
+		*/
 		
 		
 		
