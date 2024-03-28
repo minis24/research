@@ -1,5 +1,6 @@
 package lambda.stream;
 
+import java.math.BigDecimal;
 import java.nio.ByteOrder;
 import java.util.Arrays;
 import java.util.Random;
@@ -11,7 +12,13 @@ import crypto.ByteUtils;
 
 public class NoLimitStreamGenerate {
 
-	
+	/**
+	 * [ Lambda 의 기본 틀 ]
+	 * Predicate    : (T -> boolean)    -> 주로 필터에 사용
+	 * Supplier     : (() -> T)         -> 만드는놈(객체 생성)
+	 * Consumer     : (T -> void)       -> 쓰는놈(실행에 사용)
+	 * Function     : (T -> R)          -> From 에서 뭔가를 To 로 만들어 넘김
+	 */
 	public static void main(String[] args) {
 		
 		
@@ -83,8 +90,65 @@ public class NoLimitStreamGenerate {
 //		
 		
 		
-		Stream.generate(() -> "Echo")
-			.forEach(System.out::println);
+//		Stream.generate(() -> "Echo")
+//			.forEach(System.out::println);
+		
+		/*출력 결과 
+		 	Echo
+			Echo
+			Echo
+			Echo
+			Echo
+			...
+		 */
+		
+		System.out.println("-----------------------------------------");
+		System.out.println("가변 객체");
+		System.out.println("-----------------------------------------");
+		BigDecimal a = new BigDecimal(0);
+		BigDecimal b = new BigDecimal(1);
+		System.out.println("1 :: " + a);
+		System.out.println("2 :: " + b);
+		
+		
+		System.out.println("b :: "+ b);
+		a = b;
+		b = new BigDecimal(5) ;
+		
+		
+		System.out.println("3 :: " + a);
+		System.out.println("4 :: " + b);
+		
+		
+		System.out.println("-----------------------------------------");
+		System.out.println("불변 객체");
+		System.out.println("-----------------------------------------");
+		Integer a1 = 0;
+		Integer b1 = 1;
+		System.out.println("1 :: " + a1);
+		System.out.println("2 :: " + b1);
+		
+		
+		System.out.println("b1 :: "+ b1);
+		a1 = b1;
+		
+		++ b1 ;
+		
+		System.out.println("3 :: " + a1);
+		System.out.println("4 :: " + b1);
+		
+		
+		
+		System.out.println("b :: "+ b);
+		System.out.println(System.identityHashCode(b));
+		
+		
+	      Object obj = new Object();//참조변수
+	        System.out.println(obj);// java.lang.Object@50f8360d (주소값)
+	        System.out.println(obj.toString());
+	        // Object 클래스는 모든 클래스의 최고 조상 클래스
+	        // print ()메서드 안에 참조변수가 들어가면 주소값이 출력이 된다.
+	        // 즉, toString()가 자동 호출이 된다.
 		
 		
 		
