@@ -67,6 +67,7 @@ public class Example_apply {
 			return t.getName();
 		};
 		
+		
 		Function<Student, Integer> fc2 = t -> {
 			return t.getNumber();
 		};

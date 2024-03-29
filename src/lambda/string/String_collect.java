@@ -38,10 +38,13 @@ public class String_collect {
 		// 명령적 
 		List<Person> olderThan20 = new ArrayList<Person>();
 		people.stream()
-		.filter(p -> p.getAge() > 20)
-		.forEach(p -> olderThan20.add(p));
+			.filter(p -> p.getAge() > 20)
+			.forEach(p -> olderThan20.add(p));
+		
 		System.out.println("people Older than 20 : " + olderThan20);
 	
+		
+		
 		
 		//서술적 (1)
 		printPeople("collect (1) : ",
@@ -56,6 +59,8 @@ public class String_collect {
 		// * 하나의 결과 컨테이너를 다른 것과 합치는 방법 - ArrayList::addAll
 		/*****************************************************************************************************/
 		.collect(ArrayList::new , ArrayList::add , ArrayList::addAll));
+		
+		
 		
 		
 		

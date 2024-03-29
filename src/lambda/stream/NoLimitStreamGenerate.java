@@ -34,13 +34,13 @@ public class NoLimitStreamGenerate {
 		//   1) 초기값이라고도 하는 씨앗, 스트림의 첫 번째 요소가 되고 기능 새로운 요소를 생성하기 위해 이전 요소에 적용됩니다. 
 		//즉, 스트림의 다음 요소 값은 해당 메서드를 스트림의 이전 요소에 적용한 결과에 따라 결정됩니다.
 		//   2) 오퍼레이터 함수 
-		IntStream.iterate(0,i -> i+1)
-			.skip(0) // 처음 몇개의 스트림 요소를 버림 (인자값이  포함됨)
-			.limit(11) //==> 스트림의 크기를 제한(인자값이 포함 안됨 )			
-			.filter(i -> i%2 == 0)
-			.forEach(System.out::println);
+		IntStream.iterate(0,i -> i+1)	
+				.skip(0) // 처음 몇개의 스트림 요소를 버림 (인자값이  포함됨)
+				.limit(11) //==> 스트림의 크기를 제한(인자값이 포함 안됨 )			
+				.filter(i -> i%2 == 0)
+				.forEach(System.out::println);
 		
-		int sum = IntStream.iterate(0,i -> i+1)
+		int sum = IntStream.iterate(0,i -> i+1)		
 				.skip(0) // 처음 몇개의 스트림 요소를 버림 (인자값이  포함됨)
 				.limit(11) //==> 스트림의 크기를 제한(인자값이 포함 안됨 )			
 				.filter(i -> i%2 == 0)
@@ -83,6 +83,16 @@ public class NoLimitStreamGenerate {
 		System.out.println("-----------------------------------------");
 		System.out.println("3. 무한 정수 스트림 생성 - IntStream.generate() 방식");
 		System.out.println("-----------------------------------------");
+		// generate() 메서드는 인자없는 함수를 받는다.
+		//  ==> Supplier<T>의 인터페이스의 인스턴스
+		// 스트림의 값이 필요할 때는 이 함수를 호출해서 값을 생산한다.
+		
+		
+		
+		// 자바 8에서 Collection 인터페이스에 추가된 stream() 메서드를 이용해 컬렉션을 스트림으로 변환할 수 있다.
+		// 배열이 있다면 stream()메서드 대신 정적 메서드 Stream.of 메서드를 사용한다.
+		// of 메서드는 가변인자를 받기 때문에 인자 갯수가 몇개든 스트림을 생성할 수 있다.
+		
 		
 		AtomicInteger counter = new AtomicInteger();
 //		IntStream.generate(counter::incrementAndGet)
@@ -102,58 +112,9 @@ public class NoLimitStreamGenerate {
 			...
 		 */
 		
-		System.out.println("-----------------------------------------");
-		System.out.println("가변 객체");
-		System.out.println("-----------------------------------------");
-		BigDecimal a = new BigDecimal(0);
-		BigDecimal b = new BigDecimal(1);
-		System.out.println("1 :: " + a);
-		System.out.println("2 :: " + b);
 		
 		
-		System.out.println("b :: "+ b);
-		a = b;
-		b = new BigDecimal(5) ;
-		
-		
-		System.out.println("3 :: " + a);
-		System.out.println("4 :: " + b);
-		
-		
-		System.out.println("-----------------------------------------");
-		System.out.println("불변 객체");
-		System.out.println("-----------------------------------------");
-		Integer a1 = 0;
-		Integer b1 = 1;
-		System.out.println("1 :: " + a1);
-		System.out.println("2 :: " + b1);
-		
-		
-		System.out.println("b1 :: "+ b1);
-		a1 = b1;
-		
-		++ b1 ;
-		
-		System.out.println("3 :: " + a1);
-		System.out.println("4 :: " + b1);
-		
-		
-		
-		System.out.println("b :: "+ b);
-		System.out.println(System.identityHashCode(b));
-		
-		
-	      Object obj = new Object();//참조변수
-	        System.out.println(obj);// java.lang.Object@50f8360d (주소값)
-	        System.out.println(obj.toString());
-	        // Object 클래스는 모든 클래스의 최고 조상 클래스
-	        // print ()메서드 안에 참조변수가 들어가면 주소값이 출력이 된다.
-	        // 즉, toString()가 자동 호출이 된다.
-		
-		
-		
-		
-	
+
 		
 		
 	}
