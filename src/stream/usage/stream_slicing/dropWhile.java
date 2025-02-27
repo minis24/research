@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class takeWhile {
+public class dropWhile {
     public static void main(String[] args) {
         List<Dish> specialMenu = Arrays.asList(
                 new Dish("seasonal fruit", true, 120, Dish.Type.OTHER),
@@ -31,15 +31,17 @@ public class takeWhile {
 
 
         //-------------------------------------------
-        // takeWhile 연산 적용
+        // dropWhile 연산 적용
         //-------------------------------------------
-        // takeWhile연산을 이용하면 무한 스트림을 포함한 모든 스트림에 
-        // 프레디케이트를 적용해 스트림을 슬라이스 할 수 있다.
+        // dropWhile연산은 takeWhile 연산과 정반대의 작업을 수행한다. 
+        // dropWhile 은 프레디케이트가 처음으로 거짓이 되는 지점까지 발견된 요소를 버린다.
+        // 프레디케이트가 거짓이 되면 그 지점에서 작업을 중단하고 남은 모든 요소를 반환한다.
+        // 이때, dropWhile은 무한한 남은 요소를 가진 무한 스트림에서도 동작한다.
         List<Dish> slicedMenul = specialMenu.stream()
-                .takeWhile(dish -> dish.getCalories() < 320)
+                .dropWhile(dish -> dish.getCalories() < 320)
                 .collect(Collectors.toList());
 
 
-
+                
     }
 }
