@@ -1,4 +1,4 @@
-package lambda;
+package stream.usage.reducing;
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,9 +14,24 @@ public class Stream_reduce {
 		List<String> editors = Arrays.asList("Briane","Natee","Neale","Rajue","sarae","Scotte");
 		List<String> comrades = Arrays.asList("Brianc","Natec","Nealc","Rajuc","sarac","Scottc");
 		
+		//---------------------------------------------------------
+		// 리듀싱 ==> 모든 스트림 요소를 처리해서 값으로 도출
+		//---------------------------------------------------------
+		// 리듀스 연산을 이용해서 ‘메뉴의 모든 칼로리의 합계를 구하시오’，
+		// ‘메뉴에서 칼로리가 가장 높은 요리는?’ 같은 
+		// 스트림 요소를 조합해서 더 복잡한 질의를 표현하는 방법을 설명한다.
+		// 이러한 질의를 수행하려면 Integer 같은 결과가 나올 때까지 스트림의 모든 요소를
+		// 반복적으로 처리해야 한다
+			
+		
+		
+		
+		
+		
 		/**********************************************************************************************************/
 		// * map 오퍼레이션 
-		//	--> mapToInt , mapToDouble 등이 있으며 IntStream,DoubleStream 같은 특정 타입 스트림을 생성한다.
+		//	--> mapToInt , mapToDouble 등이 있으며 IntStream,DoubleStream 같은 
+		//      특정 타입 스트림을 생성한다.
 		/**********************************************************************************************************/
 		// * reduce 오퍼레이션의 특정케이스들.sum() 외..
 		// - 최대길이 max() 오퍼레이션 

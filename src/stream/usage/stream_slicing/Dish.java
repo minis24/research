@@ -27,4 +27,8 @@ public class Dish {
      public String getName (){
         return this.name;
      }
+     
+     public boolean isVegetarian (){
+         return this.vegetarian;
+      }  
 }
