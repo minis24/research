@@ -2,7 +2,7 @@ package stream.usage.stream_slicing;
 
 import javax.xml.bind.annotation.XmlInlineBinaryData;
 
-@slf4j
+
 public class takeWhile {
 
     public class Dish {
@@ -13,6 +13,14 @@ public class takeWhile {
 
         public enum Type {
             MEAT, FISH, OTHER
+        }
+
+        public Dish(String name, boolean vegetarian,int calories,Type type){
+            this.name = name;
+            this.vegetarian = vegetarian;
+            this.calories = calories;
+            this.type = type;
+
         }
 
 
