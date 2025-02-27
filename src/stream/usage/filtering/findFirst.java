@@ -1,10 +1,10 @@
-package lambda;
+package stream.usage.filtering;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-public class Stream_filter_2 {
+public class findFirst {
 
 	
 	public static void pickName (final List<String> names, final String startingLetter ) {
