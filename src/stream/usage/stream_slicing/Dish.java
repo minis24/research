@@ -23,4 +23,8 @@ public class Dish {
         return this.calories;
      }
 
+
+     public String getName (){
+        return this.name;
+     }
 }
