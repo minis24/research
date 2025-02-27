@@ -1,4 +1,4 @@
-package lambda;
+package stream.usage.filtering;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,8 +10,18 @@ import java.util.stream.Collectors;
 public class Stream_filter_1 {
 	
 	
-	// 렉시컬스코프
+	// 
+	//-----------------------------------------
+	//렉시컬스코프
+	//-----------------------------------------
+	//함수를 어디서 호출하는지가 아니라 어디에 선언하였는지에 따라 결정되는 것을 말한다.
+    //즉, 함수를 어디서 선언하였는지에 따라 상위 스코프를 결정한다는 뜻이며, 
+	//가장 중요한 점은 함수의 호출이 아니라 함수의 선언에 따라 결정된다는 점이다.
+	//다른 말로, 정적 스코프(Static scope)라 부르기도 하다.
+	
+	//-----------------------------------------
 	// Predicate 
+	//-----------------------------------------
 	// --> 컬렉션에 있는 컨텍스트 엘리먼트를 표현하기 위해 하나의 파라미터를 받는 함수를 수신해야 하며 
 	// --> bolean 결과를 리턴한다.
 	public static Predicate<String> checkIfStartsWith(final String letter) {
@@ -65,7 +75,7 @@ public class Stream_filter_1 {
 		final long countFriendsStartsN1 = friends.stream().filter(checkIfStartsWith("N")).count();
 		final long countFriendsStartsB1 = friends.stream().filter(checkIfStartsWith("B")).count();
 		
-		
+		System.out.println("countFriendsStartsB1 ::"+countFriendsStartsB1);
 		
 		//람다표현식 재사용3
 		final Function<String, Predicate<String>> startsWithLetter = 
