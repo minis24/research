@@ -31,4 +31,14 @@ public class Dish {
      public boolean isVegetarian (){
          return this.vegetarian;
       }  
+     
+     public Type getType() {
+    	 return type;
+    }
+     
+     @Override
+    public String toString() {
+    	// TODO Auto-generated method stub
+    	return this.name;
+    }
 }

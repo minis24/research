@@ -1,4 +1,4 @@
-package lambda.stream;
+package stream.make;
 
 import java.math.BigDecimal;
 import java.nio.ByteOrder;
