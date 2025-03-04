@@ -1,4 +1,4 @@
-package lambda.strategy;
+package lambda.pattern.strategy;
 
 public class Asset {
 

@@ -1,10 +1,10 @@
-package lambda.strategy;
+package lambda.pattern.strategy;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 
-import lambda.strategy.Asset.AssetType;
+import lambda.pattern.strategy.Asset.AssetType;
 
 
 /**
