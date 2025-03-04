@@ -50,7 +50,12 @@ public class min {
 		//   스트림에 아무 요소도 없는 상황을 생각해보자
 		//   이런 상황이라면 초깃값이 없으므로 reduce는 합계를 반환할 수 없다
 		//   따라서 합계가 없음을 가리킬 수 있도록 Optional 객체로 감싼 결과를 반환한다
-
+		Optional<Integer> sum2 = 
+				someNumbers
+					.stream()
+					.reduce(Integer::sum);
+		
+		sum2.ifPresent(System.out::println);
 		//출력 결과 : 15 
 	}
 	
